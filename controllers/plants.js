@@ -14,6 +14,22 @@ function index(req, res) {
   })
 }
 
+function create (req,res){
+  console.log(req.body);
+  console.log(req.owner);
+  req.body.owner = req.user.profile._id
+  req.body.watered == !!req.body.watered
+  Plant.create(req.body)
+  .then(plant => {
+    res.redirect('/plants')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/plants")
+  })
+}
+
 export {
-  index
+  index,
+  create
 }

@@ -2,13 +2,31 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Plants! 🪴</h1>
-  <h2>All the Plants!</h2>
-	<ul>
-  <% plants.forEach(plant => { %>
-    <li>🌮 <%= plant.name %> is <%= plant.watered ? 'Watered' : 'Not watered' %></li>
-  <% }) %>
-  </ul>
+  <h1>My Plants! 🪴</h1>
+  <% if (user) { %>
+    <h2>Add a Plant!</h2>
+    <form action="/plants" method="POST">
+      <label>
+        Common Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Scientific Name: 
+        <input type="text" name="scientificName" autocomplete="off">
+      </label>
+      <label>
+        Watered?
+        <input type="checkbox" name="water">
+      </label>
+      <button type="submit">Add Plant</button>
+    </form>
+    <% } %>
+    <h2>All the Plants!</h2>
+    <ul>
+    <% plants.forEach(plant => { %>
+      <li>🪴 <%= plant.name %> is <%= plant.water ? 'watered' : 'not watered' %></li>
+    <% }) %>
+    </ul>
 </section>
 
 <%- include('../partials/footer') %>

@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const plantSchema = new Schema({
-  commmonName: String,
+  name: String,
   scientificName: String,
-  watered: Boolean,
+  water: Boolean,
   owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
