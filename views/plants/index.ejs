@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Plants! 🪴</h1>
+  <h2>All the Plants!</h2>
+	<ul>
+  <% plants.forEach(plant => { %>
+    <li>🌮 <%= plant.name %> is <%= plant.watered ? 'Watered' : 'Not watered' %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>

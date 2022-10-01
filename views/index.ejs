@@ -2,7 +2,8 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Welcome to Coffee Meets Plants, <%= user ? user.profile.name : "friend" %></h1>
+  <h2>Let your plants thrive and keep your caffeine addiction alive</h2>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
