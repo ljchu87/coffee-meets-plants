@@ -55,9 +55,28 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Plant.findById(req.params.id)
+  .then(plant => {
+    if (plant.owner.equals(req.user.profile._id)) {
+      plant.updateOne(req.body)
+      .then(()=> {
+        res.redirect(`/plants/${plant._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/plant`)
+  })
+}
+
 export {
   index,
   create,
   show,
-  edit
+  edit,
+  update
 }

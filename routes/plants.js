@@ -16,6 +16,9 @@ router.get('/:id/edit', isLoggedIn, plantsCtrl.edit)
 // POST localhost:3000/plants
 router.post('/', isLoggedIn, plantsCtrl.create)
 
+// PUT localhost:3000/plants/:id
+router.put('/:id', isLoggedIn, plantsCtrl.update)
+
 export {
   router
 }
