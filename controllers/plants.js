@@ -5,12 +5,24 @@ function index(req, res) {
   .then(plants => {
     res.render('plants/index', {
       plants,
-      title: "Plants 🪴"
+      title: 'Coffee Meets Plants 🪴'
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/")
+    res.redirect('/')
+  })
+}
+
+function create (req,res){
+  req.body.owner = req.user.profile._id
+  Plant.create(req.body)
+  .then(plant => {
+    res.redirect('/plants')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/plants')
   })
 }
 
@@ -26,19 +38,6 @@ function show(req, res) {
   .catch(err => {
     console.log(err)
     res.redirect('/plants')
-  })
-}
-
-function create (req,res){
-  req.body.owner = req.user.profile._id
-  // req.body.watered == !!req.body.watered
-  Plant.create(req.body)
-  .then(plant => {
-    res.redirect('/plants')
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect("/plants")
   })
 }
 
