@@ -1,6 +1,25 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<!-- <section>
+	<p>Here are all of your plants <%= taco.owner.name %>...</p>
+  <h1><%= plant.name %> 🪴</h1>
+  <!-- <h2>This taco is <%= taco.tasty ? 'tasty! 😋' : 'not tasty! 😫' %></h2> -->
+	<% if (user) { %>
+	<% if (plant.owner.equals(user?.profile._id)) { %>
+    <a href="/plants/<%= plant._id %>/edit">
+      <button class="btn">Edit this plant 🪴</button>
+    </a>
+  <% } %>
+</section> -->
 
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+	<p>Houseplants for: <%= plant.owner.name %>...</p>
+  <h1><%= plant.name %> 🪴</h1>
+  <h2>This plant was watered on <%= plant.waterDate %></h2>
+</section>
 
 <%- include('../partials/footer') %>

@@ -14,11 +14,24 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  Plant.findById(req.params.id)
+  .populate("owner")
+  .then(plant => {
+    res.render('plants/show', {
+      plant,
+      title: "🪴 show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/plants')
+  })
+}
+
 function create (req,res){
-  console.log(req.body);
-  console.log(req.owner);
   req.body.owner = req.user.profile._id
-  req.body.watered == !!req.body.watered
+  // req.body.watered == !!req.body.watered
   Plant.create(req.body)
   .then(plant => {
     res.redirect('/plants')
@@ -29,7 +42,23 @@ function create (req,res){
   })
 }
 
+function edit(req, res) {
+  Plant.findById(req.params.id)
+  .then(plant => {
+    res.render('plants/edit', {
+      plant,
+      title: "Edit Plant"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/plants')
+  })
+}
+
 export {
   index,
-  create
+  create,
+  show,
+  edit
 }
