@@ -9,6 +9,9 @@
     <a href="/plants/<%= plant._id %>/edit">
       <button class="btn">Edit this plant 🪴</button>
     </a>
+    <form action="/plants/<%= plant._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this plant 🪴</button>
+    </form>
   <% } %>
 </section>
 

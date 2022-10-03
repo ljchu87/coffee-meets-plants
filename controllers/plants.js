@@ -73,10 +73,29 @@ function update(req, res) {
   })
 }
 
+function deletePlant(req, res) {
+  Plant.findById(req.params.id)
+  .then(plant => {
+    if (plant.owner.equals(req.user.profile._id)) {
+      plant.delete()
+      .then(() => {
+        res.redirect('/plants')
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/plants')
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
-  update
+  update,
+  deletePlant as delete
 }

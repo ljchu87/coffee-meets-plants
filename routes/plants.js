@@ -19,6 +19,9 @@ router.post('/', isLoggedIn, plantsCtrl.create)
 // PUT localhost:3000/plants/:id
 router.put('/:id', isLoggedIn, plantsCtrl.update)
 
+// DELETE localhost:3000/plants/:id
+router.delete('/:id', isLoggedIn, plantsCtrl.delete)
+
 export {
   router
 }
