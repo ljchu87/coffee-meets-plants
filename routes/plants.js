@@ -10,6 +10,9 @@ router.get('/', plantsCtrl.index)
 // GET localhost:3000/plants/:id
 router.get('/:id', plantsCtrl.show)
 
+// GET localhost:3000/plants:/id/edit
+router.get('/:id/edit', isLoggedIn, plantsCtrl.edit)
+
 // POST localhost:3000/plants
 router.post('/', isLoggedIn, plantsCtrl.create)
 

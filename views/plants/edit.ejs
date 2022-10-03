@@ -1,1 +1,24 @@
-<h1>edit</h1>
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit the plant! 🪴</h1>
+  <form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
+    <label>
+      Name: 
+      <input 
+        type="text"
+        name="name" 
+        value="<%= plant.name %>" 
+        autocomplete="off"
+      >
+    </label>
+    <label>
+      Date watered:
+      <input type="date" name="waterDate" id="water-input">
+    </label>
+    <button type="submit">Edit the plant 🪴</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

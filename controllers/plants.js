@@ -46,7 +46,7 @@ function edit(req, res) {
   .then(plant => {
     res.render('plants/edit', {
       plant,
-      title: "Edit Plant"
+      title: "Edit Plant 🪴"
     })
   })
   .catch(err => {
