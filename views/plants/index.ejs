@@ -14,17 +14,19 @@
         Scientific Name: 
         <input type="text" name="scientificName" autocomplete="off">
       </label>
-      <label>
+      <!-- <label>
         Watered?
         <input type="checkbox" name="water">
-      </label>
+      </label> -->
+      <label for="water-input">Date Watered:</label>
+      <input type="date" name="waterDate" id="water-input">
       <button type="submit">Add Plant</button>
     </form>
     <% } %>
     <h2>All the Plants!</h2>
     <ul>
     <% plants.forEach(plant => { %>
-      <li>🪴 <%= plant.name %> is <%= plant.water ? 'watered' : 'not watered' %></li>
+      <li>🪴 <%= plant.name %> was watered on <%= plant.waterDate %></li>
     <% }) %>
     </ul>
 </section>
