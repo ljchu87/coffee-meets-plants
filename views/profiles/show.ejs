@@ -10,6 +10,32 @@
     >
   </div>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <% if (isSelf)  {%> 
+    <h2>Add your favorite coffee! ☕️</h2>
+    <form action="/profiles/<%= profile._id %>/coffee" method="POST">
+      <label for="type-select">Coffee Type:</label>
+      <select name="type" id="type-select">
+        <option value="Coffee">Coffee</option>
+        <option value="Cold Brew">Cold Brew</option>
+        <option value="Latte">Latte</option>
+        <option value="Americano">Americano</option>
+      </select>
+      <label for="temperature-select">Hot/Iced:</label>
+      <select name="temperature" id="temperature-select">
+        <option value="Hot">Hot</option>
+        <option value="Iced">Iced</option>
+      </select>
+      <label for="milk-select">Milk Type:</label>
+      <select name="milk" id="milk-select">
+        <option value="Whole">Whole</option>
+        <option value="2%">2%</option>
+        <option value="Almond">Almond</option>
+        <option value="Oat">Oat</option>
+        <option value="Soy">Soy</option>
+      </select>
+      <button type="submit">Add Coffee ☕️</button>
+    </form>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

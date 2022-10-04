@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
   const coffeeSchema = new Schema ({
-    name: {
+    type: {
       type: String,
       enum: ['Coffee', 'Cold Brew', 'Latte', 'Americano', 'Macchiato']
     },
