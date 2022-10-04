@@ -4,7 +4,7 @@ import * as profilesCtrl from '../controllers/profiles.js'
 
 const router = Router()
 
-roouter.get('/', isLoggedIn, profilesCtrl.index)
+router.get('/', isLoggedIn, profilesCtrl.index)
 
 export {
   router

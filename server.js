@@ -22,7 +22,7 @@ import'./config/passport.js'
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as plantsRouter } from './routes/plants.js'
-import { router as profilesRouter } from './routes/plants.js'
+import { router as profilesRouter } from './routes/profiles.js'
 
 // create the express app
 const app = express()
