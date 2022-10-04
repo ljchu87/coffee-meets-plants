@@ -12,7 +12,10 @@ html {
 }
 
 body {
-  background-color: #a19a9a;
+  background-image: url('../images/zz-background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -75,9 +78,9 @@ pre {
 }
 
 nav > a {
-  margin: 4px 4px;
+  margin: 6px 6px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center
@@ -95,4 +98,10 @@ nav > a {
 
 .profile-avatar {
   margin-top: 50px;
+}
+
+.coffee-monstera {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
 }

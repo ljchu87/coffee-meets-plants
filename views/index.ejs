@@ -2,16 +2,17 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome to Coffee Meets Plants, <%= user ? user.profile.name : "friend" %></h1>
-  <h2>Let your plants thrive and keep your caffeine addiction alive</h2>
-  <% if (user?.profile.avatar) { %>
+  <h1>Coffee Meets Plants</h1>
+  <h2>Welcome back, <%= user ? user.profile.name : "friend" %></h2>
+  <!-- <% if (user?.profile.avatar) { %>
     <div>
       <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
+      src="<%= user.profile.avatar %>"
+      alt="<%= user.profile.name %> avatar"
       />
     </div>
-  <% } %>
-</main>
+    <% } %> -->
+    <img class="coffee-monstera" src="../images/monstera-coffee.jpeg">
+  </main>
 
 <%- include('./partials/footer') %>
