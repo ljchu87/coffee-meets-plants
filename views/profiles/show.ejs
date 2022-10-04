@@ -42,9 +42,23 @@
     </h2>
     <% profile.coffees.forEach(coffee => { %>
       <h3>
-        <%= coffee.coffeeType %> is a <%= coffee.temperature %> year old <%= coffee.milk %>.
+        Coffee: <%= coffee.coffeeType %>
+        Temperature: <%= coffee.temperature %>
+        Milk: <%= coffee.milk %>
+        <% if (isSelf) { %> 
+          <form 
+            action="/profiles/coffees/<%= coffee._id %>?_method=DELETE" 
+            method="POST"
+            style="display: inline-block;"
+          >
+            <button type="submit">Delete coffee ☕️<%= coffee.name %></button>
+          </form>
+        <% } %>
       </h3>
     <% }) %>
+
+
+
   <% } else { %>
     <h2>
       <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any coffee
