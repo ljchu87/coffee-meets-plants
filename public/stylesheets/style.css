@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  background-image: url('../images/zz-background.jpeg');
+  background-image: url('../images/plant-background.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: #f6f6f6;
+  color: #295327;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -24,13 +24,13 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
+  background-color: #DFE0D6;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px;
-  min-height: 60px;
+  min-height: 40px;
 }
 
 main {
@@ -46,11 +46,11 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 12px;
 }
 
 ul {
@@ -84,6 +84,14 @@ nav > a {
   display: flex;
   align-items: center;
   justify-content: center
+}
+
+nav > a:hover {
+  color: #C3C9C4;
+}
+
+nav > a.active {
+  color: white;
 }
 
 .btn {
