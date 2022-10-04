@@ -68,5 +68,5 @@ export {
   index,
   show,
   createCoffee,
-  deleteCoffee as delete
+  deleteCoffee
 }
