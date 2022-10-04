@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
   const coffeeSchema = new Schema ({
-    type: {
+    coffeeType: {
       type: String,
       enum: ['Coffee', 'Cold Brew', 'Latte', 'Americano', 'Macchiato']
     },
@@ -20,7 +20,7 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
-  coffee: [coffeeSchema],
+  coffees: [coffeeSchema],
   owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true

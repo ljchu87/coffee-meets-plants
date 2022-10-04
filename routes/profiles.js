@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/', isLoggedIn, profilesCtrl.index)
 router.get('/:id', isLoggedIn, profilesCtrl.show)
+router.post('/:id/coffees', isLoggedIn, profilesCtrl.createCoffee)
 
 
 export {

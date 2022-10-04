@@ -12,9 +12,9 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
   <% if (isSelf)  {%> 
     <h2>Add your favorite coffee! ☕️</h2>
-    <form action="/profiles/<%= profile._id %>/coffee" method="POST">
-      <label for="type-select">Coffee Type:</label>
-      <select name="type" id="type-select">
+    <form action="/profiles/<%= profile._id %>/coffees" method="POST">
+      <label for="coffee-select">Coffee Type:</label>
+      <select name="coffeeType" id="coffee-select">
         <option value="Coffee">Coffee</option>
         <option value="Cold Brew">Cold Brew</option>
         <option value="Latte">Latte</option>
@@ -35,6 +35,20 @@
       </select>
       <button type="submit">Add Coffee ☕️</button>
     </form>
+  <% } %>
+  <% if (profile.coffees.length)  {%>
+    <h2>
+      <%= isSelf ? "You have" : `${profile.name} has` %> coffee!
+    </h2>
+    <% profile.coffees.forEach(coffee => { %>
+      <h3>
+        <%= coffee.coffeeType %> is a <%= coffee.temperature %> year old <%= coffee.milk %>.
+      </h3>
+    <% }) %>
+  <% } else { %>
+    <h2>
+      <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any coffee
+    </h2> 
   <% } %>
 </main>
 
