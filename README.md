@@ -21,7 +21,7 @@
 ![post-styling2](public/images/post-style-capture2.png)
 ![post-styling3](public/images/post-style-capture3.png)
 ---
-## Technologies Used:
+## Technologies Used:👨🏻‍💻
 - JavaScript
 - HTML
 - CSS
@@ -31,12 +31,12 @@
 - Express
 - Git
 ---
-## Planned Future Enhancements:
+## Planned Future Enhancements: 🧊
 - Display a page of clickable plant images that can be added to each logged in users profile
 - Add the option so show the date that the plant was added and the full watering history
 - Dark mode feature
 ---
-## Credits:
+## Credits: 👏🏼
 - Coffee Plant Image [Discoverbne.com](https://www.discoverbne.com.au/home/food/epilo-the-plant-and-coffee-shop-you-never-knew-you-needed)
 - Background image: [Unsplash.com](https://unsplash.com/photos/hDyO6rr3kqk)
 - Color Theme: [Coolors.co](https://coolors.co/386d3d-1b4621-d1d5d1-c3c9c4-668574)
