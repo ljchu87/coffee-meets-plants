@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 
 const plantSchema = new Schema({
   name: String,
-  scientificName: String,
   waterDate: {
     type: String,
     default: function() {
