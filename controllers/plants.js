@@ -5,7 +5,7 @@ function index(req, res) {
   .then(plants => {
     res.render('plants/index', {
       plants,
-      title: 'Coffee Meets Plants 🪴'
+      title: 'Coffee Meets Plants'
     })
   })
   .catch(err => {
@@ -32,7 +32,7 @@ function show(req, res) {
   .then(plant => {
     res.render('plants/show', {
       plant,
-      title: "🪴 show"
+      title: "Coffee Meets Plants"
     })
   })
   .catch(err => {
@@ -46,7 +46,7 @@ function edit(req, res) {
   .then(plant => {
     res.render('plants/edit', {
       plant,
-      title: "Edit Plant 🪴"
+      title: "Coffee Meets Plants"
     })
   })
   .catch(err => {
