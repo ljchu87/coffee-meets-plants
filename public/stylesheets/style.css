@@ -42,14 +42,11 @@ main {
 h1 {
   font-size: 36px;
   text-align: center;
+  margin: 30px;
 }
 
 h2 {
   font-size: 25px;
-}
-
-h3 {
-  font-size: 12px;
 }
 
 ul {
@@ -110,6 +107,8 @@ nav > a.active {
 
 .coffee-monstera {
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
+  margin: 0 30px;
+  border: 2px solid #C3C9C4
 }

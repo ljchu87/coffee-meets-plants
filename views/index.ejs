@@ -3,7 +3,7 @@
 
 <main>
   <h1>Coffee Meets Plants</h1>
-  <h2>Welcome back, <%= user ? user.profile.name : "friend" %></h2>
+  <!-- <h2>Welcome back, <%= user ? user.profile.name : "friend" %></h2> -->
   <!-- <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -12,8 +12,10 @@
       />
     </div>
     <% } %> -->
+    <% if (user) { %>
+      <h2>Welcome back, <%= user ? user.profile.name : "friend" %></h2>
+    <% } %>
     <img class="coffee-monstera" src="../images/monstera-coffee.jpeg">
-    <h3>MADE BY: LEON CHU</h3>
   </main>
 
 <%- include('./partials/footer') %>
