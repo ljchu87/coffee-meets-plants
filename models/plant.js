@@ -6,9 +6,9 @@ const plantSchema = new Schema({
   name: String,
   scientificName: String,
   waterDate: {
-    type: Date,
+    type: String,
     default: function() {
-      return new Date().toDateString()
+      return new Date.toDateString()
     }
   },
   owner: {type: Schema.Types.ObjectId, ref: 'Profile'}

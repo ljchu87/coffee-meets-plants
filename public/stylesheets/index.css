@@ -1,3 +1,7 @@
 body {
-  background-image: url('../images/zz-background.jpeg');
+  background-image: url('../images/monstera.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
