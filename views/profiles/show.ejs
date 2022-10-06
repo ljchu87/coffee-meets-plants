@@ -12,7 +12,7 @@
   <h1>Coffee Break!</h1>
 
   <% if (user) { %>
-    <h2>Hey there, <%= user ? user.profile.name : "friend" %>! Add your favorite coffee! ☕️</h2>
+    <h2>Hey there, <%= user ? user.profile.name : "friend" %>! Grab your favorite cup of coffee and let's talk all things plants! ☕️🪴</h2>
   <% } %>
 
   <% if (isSelf)  {%> 
@@ -46,8 +46,8 @@
     </h2>
     <% profile.coffees.forEach(coffee => { %>
       <h3>
-        Coffee: <%= coffee.coffeeType %>
-        Temperature: <%= coffee.temperature %>
+        Coffee Type: <%= coffee.coffeeType %>,
+        Temperature: <%= coffee.temperature %>,
         Milk: <%= coffee.milk %>
         <% if (isSelf) { %> 
           <form 
