@@ -19,7 +19,7 @@
 .card {
   display: flex;
   width: 300px;
-  background-color: #D1D5D1;
+  background-color: #C3C9C4;
   border: 2px solid black;
   border-radius: 10px;
   color: black;
@@ -45,5 +45,5 @@
 .card:hover {
   background-color: #668574;
   color: #D1D5D1;
-  border-color: white;
+  border-color: black;
 }
