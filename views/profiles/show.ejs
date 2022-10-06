@@ -9,13 +9,17 @@
       alt="<%= profile.name %>'s avatar"
     >
   </div>
-  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <h1>Coffee Break!</h1>
+
+  <% if (user) { %>
+    <h2>Hey there, <%= user ? user.profile.name : "friend" %>! Add your favorite coffee! ☕️</h2>
+  <% } %>
+
   <% if (isSelf)  {%> 
-    <h2>Add your favorite coffee! ☕️</h2>
     <form action="/profiles/<%= profile._id %>/coffees" method="POST">
       <label for="coffee-select">Coffee Type:</label>
       <select name="coffeeType" id="coffee-select">
-        <option value="Coffee">Coffee</option>
+        <option value="Coffee">Regular coffee</option>
         <option value="Cold Brew">Cold Brew</option>
         <option value="Latte">Latte</option>
         <option value="Americano">Americano</option>
@@ -38,7 +42,7 @@
   <% } %>
   <% if (profile.coffees.length)  {%>
     <h2>
-      <%= isSelf ? "You have" : `${profile.name} has` %> coffee!
+      <%= isSelf ? "Your coffee is ready!" : `${profile.name} has added their favorite coffee` %>
     </h2>
     <% profile.coffees.forEach(coffee => { %>
       <h3>
@@ -51,7 +55,7 @@
             method="POST"
             style="display: inline-block;"
           >
-            <button type="submit">Delete coffee ☕️<%= coffee.coffeeType %></button>
+            <button type="submit">Delete this <%= coffee.coffeeType %> ☕️</button>
           </form>
         <% } %>
       </h3>
