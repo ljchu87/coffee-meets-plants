@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-	<p>Houseplants for: <%= plant.owner.name %></p>
+	<p>This houseplant belongs to: <%= plant.owner.name %></p>
   <h1><%= plant.name %> 🪴</h1>
   <h2>This <%= plant.name %> was watered on: <%= plant.waterDate %></h2>
   <% if (plant.owner.equals(user?.profile._id)) { %>
