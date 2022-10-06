@@ -13,6 +13,31 @@
 ---
 ## Wireframe: 🔧
 ![wireframe](public/images/Wireframe.png)
+![wireframe2](public/images/wireframe2.png)
+![wireframe3](public/images/wireframe3.png)
 ---
 ## Post styling: 🎊
 ![post-styling](public/images/post-style-capture.png)
+![post-styling2](public/images/post-style-capture2.png)
+![post-styling3](public/images/post-style-capture3.png)
+---
+## Technologies Used:
+- JavaScript
+- HTML
+- CSS
+- Google OAuth
+- MongoDB
+- Node
+- Express
+- Git
+---
+## Planned Future Enhancements:
+- Display a page of clickable plant images that can be added to each logged in users profile
+- Add the option so show the date that the plant was added and the full watering history
+- Dark mode feature
+---
+## Credits:
+- Coffee Plant Image [Discoverbne.com](https://www.discoverbne.com.au/home/food/epilo-the-plant-and-coffee-shop-you-never-knew-you-needed)
+- Background image: [Unsplash.com](https://unsplash.com/photos/hDyO6rr3kqk)
+- Color Theme: [Coolors.co](https://coolors.co/386d3d-1b4621-d1d5d1-c3c9c4-668574)
+- Favicon: [Icons8.com](https://icons8.com/icon/set/plants/color)
