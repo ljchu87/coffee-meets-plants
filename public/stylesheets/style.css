@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-  background-color: #DFE0D6;
+  background-color: #C3C9C4;
   color: #1a1a1a;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ nav > a {
 }
 
 nav > a:hover {
-  color: #C3C9C4;
+  color: #668574;
 }
 
 nav > a.active {
